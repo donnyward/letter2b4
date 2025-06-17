@@ -1,0 +1,26 @@
+\documentclass[b4paper]{article}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\includepdf[pages=-, fitpaper=false, pagecommand={%
+  \begin{tikzpicture}[remember picture, overlay]
+    % Calculate margins to center the US Letter content on B4
+    \pgfmathsetmacro{\leftmargin}{0.5*(\paperwidth - 612)}
+    \pgfmathsetmacro{\bottommargin}{0.5*(\paperheight - 792)}
+    % Define the corners of the US Letter area
+    \coordinate (BL) at ($(current page.south west) + (\leftmargin pt, \bottommargin pt)$);
+    \coordinate (BR) at ($(BL) + (612pt, 0)$);
+    \coordinate (TL) at ($(BL) + (0, 792pt)$);
+    \coordinate (TR) at ($(BL) + (612pt, 792pt)$);
+    % Draw crop marks at each corner
+    \draw [gray, thin] (BL) ++ (-5mm, 0) -- (BL) -- ++ (0, 5mm);
+    \draw [gray, thin] (BR) ++ (5mm, 0) -- (BR) -- ++ (0, 5mm);
+    \draw [gray, thin] (TL) ++ (-5mm, 0) -- (TL) -- ++ (0, -5mm);
+    \draw [gray, thin] (TR) ++ (5mm, 0) -- (TR) -- ++ (0, -5mm);
+  \end{tikzpicture}
+}]{existing.pdf}
+
+\end{document}
