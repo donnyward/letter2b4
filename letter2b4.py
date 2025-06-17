@@ -57,7 +57,7 @@ def process_pdf(input_path, output_path):
 def main():
     # Check if at least one PDF file is provided
     if len(sys.argv) < 2:
-        print("Usage: python flatten_and_scale_to_b4.py file1.pdf [file2.pdf ...]")
+        print("Usage: python letter2b4.py file1.pdf [file2.pdf ...]")
         sys.exit(1)
     
     # Process each input PDF
