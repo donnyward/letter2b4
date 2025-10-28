@@ -4,7 +4,7 @@ If you're in Japan and need to print a PDF on 8.5"x11" paper, you're going to ru
 
 With this script you can take a PDF and scale it such that it prints on B4 paper with 8.5"x11" cutting guidelines. Now you can easily print what you need at 7-Eleven or Kinkos and cut it to down size.
 
-B4 is the smallest international standard paper size that an 8.5"x11" sheet can fit inside.
+B4 is the smallest international standard paper size that an 8.5"x11" sheet can fit within.
 
 # Dependencies
 
