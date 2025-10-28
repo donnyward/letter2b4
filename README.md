@@ -10,10 +10,12 @@ B4 is the smallest international standard paper size that an 8.5"x11" sheet can 
 
 Setup a Python virtual environment and install dependencies.
 
-`python3 -m venv env`
-`cd env`
-`source bin/activate.fish`
-`pip install pymupdf`
+```
+python3 -m venv env
+cd env
+source bin/activate.fish
+pip install pymupdf
+```
 
 # Usage
 
